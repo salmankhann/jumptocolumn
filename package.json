@@ -1,11 +1,15 @@
 {
     "name": "jumptocolumn",
-    "displayName": "JumpToColumn",
+    "displayName": "Jump To Column",
     "description": "An extension that allows you to jump to a given column on the currently selected line",
-    "version": "2.0.0",
+    "version": "1.1.0",
     "publisher": "salman-hasrat",
     "engines": {
         "vscode": "^1.21.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/salmankhann/jumptocolumn.git"
     },
     "categories": [
         "Other"
