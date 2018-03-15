@@ -1,0 +1,47 @@
+{
+    "name": "jumptocolumn",
+    "displayName": "JumpToColumn",
+    "description": "An extension that allows you to jump to a given column on the currently selected line",
+    "version": "2.0.0",
+    "publisher": "salman-hasrat",
+    "engines": {
+        "vscode": "^1.21.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.jumpToColumn"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.jumpToColumn",
+                "title": "Jump to Column"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.jumpToColumn",
+                "key": "ctrl+g ctrl+g",
+                "mac": "alt+cmd+g",
+                "when": "editorTextFocus"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "tslint": "^5.8.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
